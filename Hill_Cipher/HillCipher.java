@@ -95,6 +95,13 @@ public class HillCipher {
         // Kontrollon nese ka nevoj per vlera x per me vlejt shumzimi i matrices me qels
         int padding = keySize - (plainText.length() % keySize);
         if (padding != keySize && padding != 0) {
+
+
+
+
+
+
+            
             for (int i = 0; i < padding; i++) {
                 plainText += 'X';
             }
