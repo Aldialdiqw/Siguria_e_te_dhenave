@@ -8,25 +8,48 @@ class HillCipherEncryptionAndDecryption {
     //................................................................................................................................................................................................
     //Main Method Starts
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-
-        System.out.print("Enter the plaintext: ");
-        String plainText = scanner.nextLine().replaceAll("[^A-Za-z]", "");
-
-        System.out.println("Enter the text of the key: ");
-        String key = scanner.nextLine().replaceAll("[^A-Za-z]", "");
-
-        if (isKeyValid(plainText, key)) {
-            System.out.println("Plain Text: " + plainText);
-            System.out.println("Hill Cipher Encryption Starts...");
-            System.out.println("Encrypted Text: " + encrypt(plainText, key));
-            System.out.println("Hill Cipher Decryption Starts...");
-            System.out.println("Decrypted Text: " + decrypt(multiplyMatrices(convertTextStringToMatrix(plainText, key), convertKeyStringToMatrix(key)), key));
-        } else {
-            System.out.println("Your key is not valid, please try another one...");
+        String plainText;
+        int valid, valid1;
+        int ahandel;
+        String key;
+        Scanner scanner = new Scanner(System.in);
+        //
+        try {
+            do {
+                System.out.print("Enter the plaintext: ");
+                plainText = scanner.nextLine().replaceAll("[^A-Za-z]", "");
+    
+            } while (plainText.length() <= 3);
+    
+            do {
+                System.out.println("Enter the text of the key that is a perfect square (THE TEXT SHOULD BE UNIQUE!!!) : ");
+                key = scanner.nextLine().replaceAll("[^A-Za-z]", "");
+            } while (key.length() != 4 && key.length() != 9 && key.length() != 16 && key.length() != 25 && key.length() != 36);
+    
+            if (isKeyValid(plainText, key)) {
+                String decryptedText = decrypt(multiplyMatrices(convertTextStringToMatrix(plainText, key), convertKeyStringToMatrix(key)), key);
+                valid = decryptedText.length();
+                valid1 = plainText.length();
+                System.out.println("Plain Text: " + plainText);
+                System.out.println("Hill Cipher Encryption Starts...");
+                System.out.println("Encrypted Text: " + encrypt(plainText, key));
+                System.out.println("Hill Cipher Decryption Starts...");
+                //handling extra a
+                if (valid != valid1) {
+                    ahandel = valid - valid1;
+                    decryptedText = decryptedText.substring(0, decryptedText.length() - ahandel);
+                }
+                System.out.println("Decrypted Text: " + decryptedText);
+            } else {
+                System.out.println("Your key is not valid, please try another one...");
+            }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            System.out.println("Please ensure your input is correct and try again.");
         }
+        scanner.close();
     }
-
+    
     //................................................................................................................................................................................................
     //Encrypt Method Starts, Encrypts PlainText to CipherText
     private static String encrypt(String plainText, String key) {
@@ -52,7 +75,7 @@ class HillCipherEncryptionAndDecryption {
             }
             return keyMatrixArrayList;
         } else {
-            System.out.println("Your key is not able to create a square matrix, please enter key with valid key length.");
+            System.out.println("Your key is not able to create a square matrix, please enter key with valid key length .");
             return null;
         }
     }
@@ -95,6 +118,8 @@ class HillCipherEncryptionAndDecryption {
         }
         return textMatrixArrayList;
     }
+
+
 
     //................................................................................................................................................................................................
     //MultiplyMatrices Method Starts, Multiply Two Matrices with Different Dimensions
