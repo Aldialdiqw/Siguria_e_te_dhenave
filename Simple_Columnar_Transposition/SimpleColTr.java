@@ -1,3 +1,5 @@
+package Simple_Columnar_Transposition;
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
