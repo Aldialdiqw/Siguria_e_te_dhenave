@@ -52,6 +52,11 @@
     #fits evenly into the specified number of columns. The message is then arranged 
     #into a table based on the specified key.The characters are read out from the 
     #table column by column to generate the cipher text.
+    
+#Example:
+![Shembull i enkriptimit te Simple Columnar Transposition Cipher](https://github.com/Aldialdiqw/Siguria_e_te_dhenave/assets/155023104/3bfc6699-bbd9-4b44-840f-a1ffa3e70fd1)
+
+
 
         
 
