@@ -27,5 +27,31 @@
         #program will create a key square matrix that will devide the plaintext into
         #blocks the length of the key matrix size. After each block has been encrypted
         #u will get the ciphertext.
+    
 
     #Decryption
+    
+#Simple Columnar Transposition Cipher
+
+#This Java program demonstrates the encryption using the Simple 
+#Columnar Transposition Cipher. The Simple Columnar Transposition 
+#Cipher is a basic form of transposition cipher where the text
+#is written out in rows of a fixed length, and then read out 
+#again column by column. It provides a simple way of encrypting 
+#messages by rearranging the order of the letters.
+
+    # #Encryption
+
+    #The enkriptimi() method is responsible for encrypting the input message using 
+    #the Simple Columnar Transposition Cipher. The program prompts the user to enter 
+    #a message and the number of columns (key) for encryption.It ensures that the 
+    #input key is a positive integer and handles invalid inputs gracefully.
+    #The input message is converted to uppercase and spaces are removed before 
+    #encryption. The message is padded with "#" characters if necessary to ensure it 
+    #fits evenly into the specified number of columns. The message is then arranged 
+    #into a table based on the specified key.The characters are read out from the 
+    #table column by column to generate the cipher text.
+
+        
+
+        
