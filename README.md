@@ -1,4 +1,5 @@
 
+
 # Siguria_e_te_dhenave
 
 #Hill_Cipher_Algorithm
@@ -44,7 +45,7 @@ Follow these step-by-step instructions to execute the program using any Java IDE
 3. **Matrix Multiplication**: Each ciphertext block is multiplied by the decryption key matrix modulo 37. This operation yields the original plaintext block.
 4. **Padding Removal**: If padding was added during encryption, it is removed from the decrypted plaintext.
 5. **Decrypted Text Generation**: The decrypted plaintext blocks are concatenated to form the original plaintext.
-
+![Screenshot 2024-04-21 231529](https://github.com/Aldialdiqw/Siguria_e_te_dhenave/assets/98291577/ee2fa246-b725-4c10-aab6-1a5852b5f254)
 #Simple Columnar Transposition Cipher
 
 #This Java program demonstrates the encryption using the Simple Columnar Transposition Cipher. The Simple Columnar Transposition Cipher is a basic form of transposition cipher where the text is written out in rows of a fixed length, and then read out again column by column. It provides a simple way of encrypting messages by rearranging the order of the letters.
