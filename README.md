@@ -50,6 +50,14 @@
 #Example of the encryption of Simple Columnar Transposition Cipher:
 ![Shembull i enkriptimit te Simple Columnar Transposition Cipher](https://github.com/Aldialdiqw/Siguria_e_te_dhenave/assets/155023104/3bfc6699-bbd9-4b44-840f-a1ffa3e70fd1)
 
+# Simple Columnar Transposition Cipher Decryption
+#This program implements the decryption algorithm for the Simple Columnar Transposition Cipher. The decryption algorithm is a way to revert encrypted messages using the columnar transposition algorithm back to their original messages.
+#Decryption stages:
+#Choose a key: Firstly, you need to know the key used to encode the message. The key is the number of columns the message was divided into to create the encoded message.
+#Decrypt the message: In this stage, the encoded message is read in a single line, and then it's divided into rows according to the number of columns in the key.
+#Read the original message: After dividing the encoded message into rows based on the columns, it needs to be read from left to right to obtain the original message.
+#Code structure: `SimpleColTr.java`: This is the main class containing the logic for decryption using the columnar transposition algorithm.
+
 
 
         
