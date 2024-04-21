@@ -15,7 +15,7 @@ public class SimpleColDec {
 
     private static void dekriptimi() {
         System.out.print("\nDekriptimi i Cipher Text: ");
-        in.nextLine(); // Consumes the newline character
+         // Consumes the newline character
         String cipherText = in.nextLine().toUpperCase().replace(" ", "");
         StringBuilder decryptedText = new StringBuilder();
 
