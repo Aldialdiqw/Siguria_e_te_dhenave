@@ -33,12 +33,7 @@
     
 #Simple Columnar Transposition Cipher
 
-#This Java program demonstrates the encryption using the Simple 
-#Columnar Transposition Cipher. The Simple Columnar Transposition 
-#Cipher is a basic form of transposition cipher where the text
-#is written out in rows of a fixed length, and then read out 
-#again column by column. It provides a simple way of encrypting 
-#messages by rearranging the order of the letters.
+#This Java program demonstrates the encryption using the Simple Columnar Transposition Cipher. The Simple Columnar Transposition Cipher is a basic form of transposition cipher where the text is written out in rows of a fixed length, and then read out again column by column. It provides a simple way of encrypting messages by rearranging the order of the letters.
 
     # #Encryption
 
@@ -52,7 +47,7 @@
     #into a table based on the specified key.The characters are read out from the 
     #table column by column to generate the cipher text.
     
-#Example:
+#Example of the encryption of Simple Columnar Transposition Cipher:
 ![Shembull i enkriptimit te Simple Columnar Transposition Cipher](https://github.com/Aldialdiqw/Siguria_e_te_dhenave/assets/155023104/3bfc6699-bbd9-4b44-840f-a1ffa3e70fd1)
 
 
