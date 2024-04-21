@@ -43,7 +43,7 @@ public class HillCipher {
         }
     }
 
-    private int determinant(int[][] matrix) {
+    private static int determinant(int[][] matrix) {
         if (matrix.length == 1) {
             return matrix[0][0];
         }
@@ -209,6 +209,19 @@ public class HillCipher {
             for (int j = 0; j < order; j++) {
                 hillMatrix[i][j] = scanner.nextInt();
             }
+        }
+        int det = determinant(hillMatrix);
+        int detInv = -1;
+        for (int i = 0; i < 37; i++) {
+            if ((det * i) % 37 == 1) {
+                detInv = i;
+                break;
+            }
+        }
+        if (detInv == -1) {
+            throw new IllegalArgumentException("No modular inverse found for the determinant. The encryption key might be invalid for decryption.");
+        }else{
+            System.out.println("The encryption key is valid for decryption.");
         }
 
         HillCipher hc = new HillCipher(hillMatrix);
