@@ -1,4 +1,3 @@
-![Shembull i enkriptimit te Simple Columnar Transposition Cipher](https://github.com/Aldialdiqw/Siguria_e_te_dhenave/assets/155023104/ae2f405e-1aac-48ec-8697-c64ca8011970)
 # Siguria_e_te_dhenave
 
 #Hill_Cipher_Algorithm
